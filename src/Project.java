@@ -11,19 +11,20 @@ public class Project {
         int numPeople = s.nextInt();
         double tipCost = totalBill * tipPercent;
         tipCost = Math.round((tipCost + .001) * 100.0) / 100.0  ;
-        System.out.println(tipCost);
         double tipPerPerson = tipCost / numPeople;
+        System.out.println(tipPerPerson);
+        tipPerPerson = Math.round((tipPerPerson + .001) * 100.0) / 100.0;
+        System.out.println(tipPerPerson);
         double costPerPerson = totalBill / numPeople;
-        costPerPerson = Math.round((costPerPerson + .001) * 100.0) / 100.0;
         double totalPerPerson = costPerPerson + tipPerPerson;
         totalPerPerson = Math.round(totalPerPerson * 100.0) / 100.0;
-        if ((totalPerPerson * numPeople) != (totalBill + tipCost)) {
-            totalPerPerson += .011;
+        if ((totalPerPerson * numPeople) < (totalBill + tipCost)) {
+            totalPerPerson += .01;
             totalPerPerson = Math.round(totalPerPerson * 100.0) / 100.0;
         }
 
-        System.out.println(tipPerPerson);
-        System.out.println(totalPerPerson);
+        System.out.println("Tip Per Person: $" + tipPerPerson);
+        System.out.println("Total Per Person: $" + totalPerPerson);
 
 //https://github.com/jchong8630/Unit1Project
 
