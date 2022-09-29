@@ -30,10 +30,10 @@ public class Project {
 
         //Display
         System.out.println();
-        System.out.println("Total Tip Cost: $" + tipCost);
-        System.out.println("Total Cost: $" + completeBill);
-        System.out.println("Tip Per Person: $" + tipPerPerson);
-        System.out.println("Total Per Person: $" + totalPerPerson);
+        System.out.println("Total Tip Cost: $" + String.format("%.2f", tipCost));
+        System.out.println("Total Cost: $" + String.format("%.2f", completeBill));
+        System.out.println("Tip Per Person: $" + String.format("%.2f", tipPerPerson));
+        System.out.println("Total Per Person: $" + String.format("%.2f", totalPerPerson));
 
     }
 }
